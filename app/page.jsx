@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import BImage from "./background.png";
+import Lottie from "react-lottie";
+import lottieConfettiAnimation from "./lottie-confetti.json";
 
 const Timer = ({ time, label }) => (
   <div className="timer w-12 md:w-24 p-3 bg-black bg-opacity-70 backdrop-blur-sm rounded-xl flex flex-col items-center">
@@ -52,6 +54,15 @@ export default function Home() {
     return () => clearInterval(x);
   }, []);
 
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: lottieConfettiAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div className="relative w-full h-screen">
       <Image
@@ -62,6 +73,9 @@ export default function Home() {
         className="bg-opacity-60"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-70 p-4">
+        <div className="confetti">
+          <Lottie options={lottieOptions} width={"100%"} height={"100%"} />
+        </div>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
           <Timer time={timeLeft.days} label="Days" />
           <Timer time={timeLeft.hours} label="Hours" />
