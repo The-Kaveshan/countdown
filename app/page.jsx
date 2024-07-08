@@ -85,7 +85,7 @@ export default function Home() {
         <div className="inset-0 flex flex-col items-center justify-center  p-4">
           <p className="mt-10 text-6xl text-white font-medium ">TO</p>
           <h1 className="mt-10 mb-10 text-9xl font-medium tracking-tight text-pink-400">
-            GAYLE's
+            {`GAYLE's`}
           </h1>
           <h1 className="text-6xl font-medium tracking-tight text-white">
             BIRTHDAY
