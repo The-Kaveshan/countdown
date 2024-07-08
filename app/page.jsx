@@ -26,7 +26,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const dest = new Date("aug 7, 2024 10:00:00").getTime();
+    const dest = new Date("aug 7, 2024 00:00:00").getTime();
     const x = setInterval(() => {
       const now = new Date().getTime();
       const diff = dest - now;
