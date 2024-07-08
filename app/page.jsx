@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen overflow-hidden">
       <Image
         src={BImage}
         alt="waves"
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
         <div className="inset-0 flex flex-col items-center justify-center  p-4">
           <p className="mt-10 text-6xl text-white font-medium ">TO</p>
-          <h1 className="mt-10 mb-10 text-9xl font-medium tracking-tight text-pink-400">
+          <h1 className="mt-10 mb-10 text-8xl font-medium tracking-tight text-pink-400">
             {`GAYLE's`}
           </h1>
           <h1 className="text-6xl font-medium tracking-tight text-white">
